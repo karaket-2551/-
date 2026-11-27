@@ -1,47 +1,56 @@
-# 🌐 E-Portfolio | นางสาวการะเกด หินเกล็ด
+<!DOCTYPE html>
+<html lang="th" translate="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <title>E-Portfolio | นางสาวการะเกด หินเกล็ด</title>
+    <!-- นำเข้าฟอนต์ Prompt จาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ตั้งค่าตัวแปรสีธีม น้ำเงิน - ขาว */
+        :root {
+            --primary-blue: #1e40af;      /* น้ำเงินเข้มหลัก */
+            --secondary-blue: #3b82f6;    /* น้ำเงินสว่าง */
+            --light-blue: #eff6ff;        /* ฟ้าอ่อนพื้นหลัง */
+            --accent-blue: #dbeafe;       /* ฟ้าอ่อนสำหรับขอบ/ป้าย */
+            --text-dark: #1e293b;         /* สีตัวอักษรเข้ม */
+            --text-muted: #64748b;        /* สีตัวอักษรรอง */
+            --white: #ffffff;
+            --shadow: 0 10px 25px -5px rgba(30, 64, 175, 0.1), 0 8px 10px -6px rgba(30, 64, 175, 0.1);
+            --transition: all 0.3s ease;
+        }
 
-เว็บไซต์แฟ้มสะสมผลงานออนไลน์ (E-Portfolio) สำหรับยื่นเข้าศึกษาต่อใน **คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมอุตสาหการ มหาวิทยาลัยศรีนครินทรวิโรฒ** พัฒนาขึ้นด้วย HTML5, CSS3 และ JavaScript โดยเน้นดีไซน์ที่ทันสมัย อ่านง่าย และรองรับการแสดงผลทุกขนาดหน้าจอ (Responsive Design)
+        /* รีเซ็ตและตั้งค่าพื้นฐาน */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Prompt', sans-serif;
+            scroll-behavior: smooth;
+        }
 
----
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
 
-## 👤 ข้อมูลผู้จัดทำ
-* **ชื่อ - นามสกุล:** นางสาวการะเกด หินเกล็ด
-* **ระดับการศึกษา:** ชั้นมัธยมศึกษาปีที่ 6 แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์
-* **สถานศึกษา:** โรงเรียนธัญรัตน์ จังหวัดปทุมธานี
-* **เป้าหมายการศึกษาต่อ:** คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมอุตสาหการ มหาวิทยาลัยศรีนครินทรวิโรฒ
+        /* แถบเมนูนำทาง (Navbar) */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+        }
 
----
-
-## ✨ คุณสมบัติเด่นของเว็บไซต์ (Features)
-1. **โครงสร้างครบ 4 ส่วนหลัก:**
-   * **หน้าแรก (Home):** แนะนำตัวตนและเป้าหมายการศึกษาต่ออย่างชัดเจน
-   * **แนะนำตัว (About Me):** ประวัติการศึกษา ความสนใจ และทักษะด้านวิศวกรรมและเทคโนโลยี
-   * **ผลงาน (Projects):** การ์ดแสดงโครงงานด้านการเขียนโปรแกรมและการวิเคราะห์ข้อมูล พร้อมลิงก์ซอร์สโค้ดบน GitHub
-   * **กิจกรรม (Activities):** ไทม์ไลน์การเข้าร่วมค่ายอบรมและกิจกรรมทางวิชาการ
-2. **ธีมสีและการออกแบบ:** ใช้โทนสีน้ำเงิน-ขาว (Blue & White Theme) ร่วมกับฟอนต์ภาษาไทย **Prompt** จาก Google Fonts เพื่อความสบายตาและเป็นทางการ
-3. **Responsive Web Design:** รองรับการเปิดใช้งานทั้งบนคอมพิวเตอร์ แท็บเล็ต และสมาร์ทโฟน
-4. **Single-File Architecture:** เขียนโค้ดทั้งหมดรวมอยู่ในไฟล์ `index.html` เพียงไฟล์เดียว ไม่ต้องติดตั้งเครื่องมือหรือไลบรารีเพิ่มเติม
-
----
-
-## 🛠️ เทคโนโลยีที่ใช้ (Tech Stack)
-* **HTML5** - โครงสร้างหลักของเว็บไซต์
-* **CSS3** - การตกแต่งรูปแบบ (Custom Properties, Flexbox, CSS Grid)
-* **JavaScript (Vanilla JS)** - การควบคุมเมนูบนอุปกรณ์พกพาและการเลื่อนหน้าจอ (Smooth Scroll & Active Navigation)
-* **Google Fonts** - ฟอนต์ `Prompt`
-* **GitHub Pages** - ระบบโฮสติ้งสำหรับเผยแพร่เว็บไซต์สาธารณะ
-
----
-
-## 🚀 วิธีการนำไปใช้งานและเผยแพร่บน GitHub Pages
-1. สร้าง Repository ใหม่บน GitHub (เช่น `e-portfolio` หรือ `karaked.github.io`)
-2. อัปโหลดไฟล์ `index.html` และ `README.md` เข้าสู่ Repository
-3. ไปที่แท็บ **Settings** > เลือกเมนู **Pages** ทางด้านซ้าย
-4. ในหัวข้อ **Build and deployment** > **Branch** ให้เลือกเป็น `main` (หรือ `master`) และโฟลเดอร์ `/ (root)` จากนั้นกด **Save**
-5. รอประมาณ 1-2 นาที ระบบจะสร้างลิงก์เว็บไซต์สาธารณะให้พร้อมใช้งานทันที
-
----
-
-## 📬 ช่องทางการติดต่อ
-* **GitHub:** [github.com/karaked-thanyarat-example](https://github.com/karaked-thanyarat-example) *(สามารถแก้ไขเป็นลิงก์จริงของคุณ)*
-* **Email:** karaked.hinkled.example@email.com *(สามารถแก้ไขเป็นอีเมลจริงของคุณ)*
+        .nav-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 1rem 1.
